@@ -1,0 +1,35 @@
+<!-- frontend/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance QR Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.0.3/html5-qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Attendance QR Tracker</h1>
+        <div id="auth-container">
+            <h2>Login / Register</h2>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button id="register-btn">Register</button>
+            <button id="login-btn">Login</button>
+        </div>
+
+        <div id="attendance-container" style="display:none;">
+            <h2>Scan QR Code</h2>
+            <div id="reader" style="width: 300px; height: 300px;"></div>
+            <button id="mark-attendance-btn" style="display:none;">Mark Attendance</button>
+        </div>
+
+        <div id="attendance-list-container" style="display:none;">
+            <h2>Your Attendance</h2>
+            <ul id="attendance-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
